@@ -152,4 +152,23 @@ models:
         - name: ads_cost         
         - name: impression
         - name: click      
-       
+    - name: finance_campaigns_day
+      description: This table contains ads margin  from finance day and campaigns day  
+      columns: 
+        - name: date_date
+          tests:
+            - unique  
+            - not_null
+        - name: nb_orders
+        - name: operational_margin
+        - name: ads_cost
+        - name: ads_impression
+        - name: ads_click
+        - name: purchase_cost
+        - name: shipping_fee
+        - name: log_cost
+        - name: ship_cost
+        - name: quantity
+        - name: revenue
+        - name: margin
+        - name: ads_margin
