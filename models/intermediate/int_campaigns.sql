@@ -4,7 +4,7 @@ paid_source,
 campaign_key,
 campaign_name,
 ads_cost,
-impression
+impression,
 click
 FROM {{ref("stg_raw__adwords")}}
 UNION ALL
@@ -14,7 +14,7 @@ paid_source,
 campaign_key,
 campaign_name,
 ads_cost,
-impression
+impression,
 click
 FROM {{ref("stg_raw__bing")}}
 UNION ALL
@@ -24,7 +24,7 @@ paid_source,
 campaign_key,
 campaign_name,
 ads_cost,
-impression
+impression,
 click
 FROM {{ref("stg_raw__criteo")}}
 UNION ALL 
@@ -34,6 +34,6 @@ paid_source,
 campaign_key,
 campaign_name,
 ads_cost,
-impression
+impression,
 click
 FROM {{ref("stg_raw__facebook")}}
