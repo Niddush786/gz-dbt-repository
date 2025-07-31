@@ -1,4 +1,5 @@
-{{config(materialized)='table'}}
+
+
 
 WITH blank AS (
    SELECT
