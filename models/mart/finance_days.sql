@@ -1,6 +1,4 @@
 
-
-
 WITH blank AS (
    SELECT
      date_date,

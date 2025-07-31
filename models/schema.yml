@@ -34,7 +34,6 @@ sources:
     - name: product
       identifier: raw_gz_product 
       description: products of greenweez/ products_id is the primary key 
-      
       columns:
         - name: products_id
           description: Unique identifier for the product (joins with sales table). Is the Primary Key for this table.
@@ -61,4 +60,7 @@ sources:
         - name: ship_cost
           description: Internal shipping cost for Greenweez operations.
 
-      
+
+
+
+       
