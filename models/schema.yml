@@ -139,5 +139,18 @@ sources:
         - name: ads_cost         
         - name: impression
         - name: click
-          
+
+    - name: daily_campaign
+      identifier: int_campaigns
+      description: This table contains aggregated data by date(per day)
+      tests:
+          - not_null
+          - unique
+      columns: 
+        - name: date_date
+          tests:
+            - not_null          
+        - name: ads_cost         
+        - name: impression
+        - name: click      
        
