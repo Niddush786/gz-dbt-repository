@@ -1,3 +1,5 @@
+{{config(materialised='table')}}
+
 WITH blank AS (
    SELECT
      date_date,
@@ -16,7 +18,7 @@ WITH blank AS (
 Select 
 *,
  
- ROUND(NULLIF(revenue/(nb_orders),0) ,2) AS average_basket
+ ROUND(NULLIF(revenue/nb_orders,0) ,2) AS average_basket
 FROM blank
 ORDER BY date_date DESC
 
