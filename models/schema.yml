@@ -64,10 +64,17 @@ sources:
     - name: bing
       identifier: raw_gz_bing
       description: This table contains raw performance data from Bing Ads campaigns
+      tests:
+          - unique:
+              column_name: "(date_date || '-' || campaign_key)"
       columns: 
         - name: date_date 
+          tests:
+            - not_null
         - name: paid_source         
-        - name: campaign_key        
+        - name: campaign_key
+          tests:
+            - not_null
         - name: camPGN_name          
         - name: ads_cost         
         - name: impression         
@@ -77,10 +84,17 @@ sources:
     - name: criteo
       identifier: raw_gz_criteo
       description: This table contains raw performance data from Criteo Ads campaigns
+      tests:
+          - unique:
+              column_name: "(date_date || '-' || campaign_key)"
       columns: 
-        - name: date_date         
+        - name: date_date 
+          tests:
+            - not_null
         - name: paid_source       
-        - name: campaign_key         
+        - name: campaign_key 
+          tests:
+            - not_null
         - name: camPGN_name          
         - name: ads_cost        
         - name: impression         
@@ -90,10 +104,17 @@ sources:
     - name: facebook
       identifier: raw_gz_facebook
       description: This table contains raw performance data from Facebook Ads campaigns
+      tests:
+          - unique:
+              column_name: "(date_date || '-' || campaign_key)"
       columns: 
         - name: date_date
+          tests:
+            - not_null
         - name: paid_source         
-        - name: campaign_key         
+        - name: campaign_key
+          tests:
+            - not_null
         - name: camPGN_name           
         - name: ads_cost          
         - name: impression         
@@ -103,10 +124,17 @@ sources:
     - name: adwords
       identifier: raw_gz_adwords
       description: This table contains raw performance data from Adwords Ads campaigns
+      tests:
+          - unique:
+              column_name: "(date_date || '-' || campaign_key)"
       columns: 
-        - name: date_date         
+        - name: date_date
+          tests:
+            - not_null
         - name: paid_source         
-        - name: campaign_key          
+        - name: campaign_key  
+          tests:
+            - not_null
         - name: camPGN_name           
         - name: ads_cost         
         - name: impression
